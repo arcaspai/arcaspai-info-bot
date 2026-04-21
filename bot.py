@@ -18,7 +18,7 @@ async def on_ready():
 
 # send introduction
 @tree.command(name = "introduction", description = "About Arcaspai Project")
-async def embed(interaction) :
+async def introduct_embed(interaction) :
     embed = discord.Embed(title="About Arcaspai", colour=discord.Colour.from_rgb(144, 136, 255))
     embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url="https://media.discordapp.net/attachments/1491315989428572171/1493217429692747826/arcaspaibanner08.png")
     embed.set_thumbnail(url="https://media.discordapp.net/attachments/1491315989428572171/1493217429692747826/arcaspaibanner08.png")
@@ -40,8 +40,22 @@ async def embed(interaction) :
     app_commands.Choice(name="itch.io", value="https://discord.com/channels/1484901254583812269/1490580195286061146/1490626055952793682"),
     app_commands.Choice(name="discord", value="https://discord.gg/pvUKPcXq")
 ])
-async def food_choice(interaction: discord.Interaction, site: app_commands.Choice[str]):
+async def link_choice(interaction: discord.Interaction, site: app_commands.Choice[str]):
     await interaction.response.send_message(f"{site.value}")
+
+# send characters image
+@tree.command(name="portrait", description="check character portrait (input only small letter plase)")
+@app_commands.choices(imagetype=[
+    app_commands.Choice(name="portrait", value="portrait"),
+    app_commands.Choice(name="icon", value="icon")
+])
+async def portraits_embed(interaction: discord.Interaction, character: str, imagetype: app_commands.Choice[str]) :
+    embed = discord.Embed(title=f"{character}'s portrait", colour=discord.Colour.from_rgb(144, 136, 255))
+    embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url="https://media.discordapp.net/attachments/1491315989428572171/1493217429692747826/arcaspaibanner08.png")
+    embed.set_image(url=f"https://arcaspai.github.io/images/decoration/banner-{character}.png") # need fix to https://arcaspai.github.io/universe/_images/{imagetype}s/{character}_{imagetype}.png
+    embed.set_footer(text="Arcaspai Project © 2021-2026 Redder")
+
+    await interaction.response.send_message(embed=embed)
 
 # running bot
 client.run(TOKEN)
