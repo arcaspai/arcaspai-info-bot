@@ -1,0 +1,23 @@
+{
+    "alaya": {
+        "ireum": "아라야",
+        "name": "Alaya",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "ganaka": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "template": {
+        "ireum": "-",
+        "name": "-",
+        "quote": "-",
+        "description" : "-",
+        "universe" : "-"
+    }
+}
