@@ -13,6 +13,76 @@
         "description" : "asdf",
         "universe" : "arkhive"
     },
+    "kushagra": {
+        "ireum": "쿠샤그라",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "vishvam": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "sohee": {
+        "ireum": "소희",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "astra": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "marine": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "ciel": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "zett": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "robin": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "patrick": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
+    "rosamund": {
+        "ireum": "가나카",
+        "name": "Ganaka",
+        "quote": "apple.png",
+        "description" : "asdf",
+        "universe" : "arkhive"
+    },
     "template": {
         "ireum": "-",
         "name": "-",

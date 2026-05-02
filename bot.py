@@ -64,13 +64,20 @@ characters_info = app_commands.Group(name="character", description="embed charac
 ])
 async def character_images(interaction: discord.Interaction, character: str, imagetype: app_commands.Choice[str]) :
     char_name = character.lower().strip()
-    embed = discord.Embed(title=f"{character}'s {imagetype.value}", colour=discord.Colour.from_rgb(144, 136, 255))
-    embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
-    embed.set_image(url=f"https://arcaspai.github.io/universe/images/{imagetype.value}s/{char_name}_{imagetype.value}.png")
-    embed.set_footer(text=embed_footer)
+    char_info = char_list.get(char_name)
+    if char_info:
+        name_en = char_info["name"]
+        
+        embed = discord.Embed(title=f"{name_en}'s {imagetype.value}", colour=discord.Colour.from_rgb(144, 136, 255))
+        embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
+        embed.set_image(url=f"https://arcaspai.github.io/universe/assets/img/{imagetype.value}s/{char_name}_{imagetype.value}.png")
+        embed.set_footer(text=embed_footer)
 
-    await interaction.response.send_message(embed=embed)
+        await interaction.response.send_message(embed=embed, ephemeral=False)
 
+    else:
+        await interaction.response.send_message("Not founded. Please check that you entered the information correctly.", ephemeral=True)
+    
 @characters_info.command(name = "profile", description="embed character profiles (write only forenames please.)")
 async def character_profiles(interaction: discord.Interaction, character: str):
     char_name = character.lower().strip()
@@ -84,7 +91,7 @@ async def character_profiles(interaction: discord.Interaction, character: str):
         
         embed = discord.Embed(title=f"{name_en}'s profile", colour=discord.Colour.from_rgb(144, 136, 255))
         embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
-        embed.set_thumbnail(url=f"https://arcaspai.github.io/universe/images/icons/{char_name}_icon.png")
+        embed.set_thumbnail(url=f"https://arcaspai.github.io/universe/assets/img/icons/{char_name}_icon.png")
         embed.add_field(name="name(KO)", value=name_ko, inline=True)
         embed.add_field(name="name(EN)", value=name_en, inline=True)
         embed.add_field(name="quote", value=f'"{quote}"', inline=False)
@@ -96,8 +103,6 @@ async def character_profiles(interaction: discord.Interaction, character: str):
         
     else:
         await interaction.response.send_message("Not founded. Please check that you entered the information correctly.", ephemeral=True)
-        
-
 
 # making groups
 tree.add_command(characters_info)
