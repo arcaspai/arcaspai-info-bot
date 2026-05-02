@@ -25,7 +25,21 @@ async def on_ready():
     print("running now")
 
 # send help
+@tree.command(name = "help", description = "about Arcaspai.io bot")
+async def introduct_embed(interaction) :
+    embed = discord.Embed(title="About Arcaspai.io", colour=discord.Colour.from_rgb(144, 136, 255))
+    embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
+    embed.add_field(name="`/help`", value="send help", inline=False)
+    embed.add_field(name="`/introduction`", value="send help", inline=False)
+    embed.add_field(name="`/website`", value="send help", inline=False)
+    embed.add_field(name="`/character`", value="send help", inline=False)
+    embed.add_field(name="`image`", value="2021-08-29", inline=True)
+    embed.add_field(name="`profile`", value="2026-01-27", inline=True)
+    embed.add_field(name="`/help`", value="send help", inline=False)
+    embed.add_field(name="Website", value="https://arcaspai.github.io", inline=False)
+    embed.set_footer(text=embed_footer)
 
+    await interaction.response.send_message(embed=embed)
 
 # send introduction
 @tree.command(name = "introduction", description = "about Arcaspai Project")
@@ -103,6 +117,8 @@ async def character_profiles(interaction: discord.Interaction, character: str):
         
     else:
         await interaction.response.send_message("Not founded. Please check that you entered the information correctly.", ephemeral=True)
+
+
 
 # making groups
 tree.add_command(characters_info)
