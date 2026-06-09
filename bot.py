@@ -1,7 +1,9 @@
+import os
 import discord
-import tokenbox
-import json
 from discord import app_commands
+from discord.ext import commands
+from dotenv import load_dotenv
+import json
 
 # values
 intents = discord.Intents.default()
@@ -11,7 +13,11 @@ tree = app_commands.CommandTree(client)
 embed_footer = "Arcaspai Project © 2021-2026 Redder"
 bot_icon = "https://media.discordapp.net/attachments/1491315989428572171/1493217429692747826/arcaspaibanner08.png"
 
-TOKEN = tokenbox.token
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+intents = discord.Intents.default()
+intents.message_content = True
 
 # import JSON file
 with open('data/charlist.json', 'r', encoding='utf-8') as f:
