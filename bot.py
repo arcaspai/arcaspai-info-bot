@@ -94,7 +94,7 @@ async def introduct_embed(interaction: discord.Interaction):
     app_commands.Choice(name="universe", value="https://arcaspai.github.io/universe"),
     app_commands.Choice(name="youtube", value="https://www.youtube.com/@arcaspai"),
     app_commands.Choice(name="itch.io", value="https://itch.io/arcaspai"),
-    app_commands.Choice(name="discord", value="https://discord.gg/pvUKPcXq"),
+    app_commands.Choice(name="discord", value="https://discord.gg/9f4eTczzFu"),
     app_commands.Choice(name="soundtracks", value="https://bandlab.com/band/arcaspai")
 ])
 async def link_choice(interaction: discord.Interaction, site: app_commands.Choice[str]):
