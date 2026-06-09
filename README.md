@@ -1,3 +1,7 @@
+
+## check data
+You can check some datas into [arcaspai/universe](https://github.com/arcaspai/universe)
+
 ## credit
 learning
   - https://sunwoo-j.github.io/categories/discord-py/

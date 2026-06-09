@@ -1,93 +1,171 @@
 {
     "alaya": {
-        "ireum": "아라야",
-        "name": "Alaya",
-        "quote": "apple.png",
-        "description" : "asdf",
+        "nameKo": "아라야",
+        "nameEn": "Alaya",
+        "quote": {
+            "ko": "저랑 같이 별 보러 가실래요?",
+            "en": "Would you like to go star-gazing with me?"
+        },
+        "description" : {
+            "ko": "아크하이브 출신 여행자. 진리체 탐구를 위해 여러 우주를 여행하는 중이다.",
+            "en": "A traveler from Arkhive. She is currently traveling through multiple universes to explore the truth entities."
+        },
         "universe" : "arkhive"
     },
     "ganaka": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
+        "nameKo": "가나카",
+        "nameEn": "Ganaka",
+        "quote": {
+            "ko": "같이 자전거 탈 사람?",
+            "en": "Anyone want to go for a bike ride?"
+        },
+        "description" : {
+            "ko": "아크하이브의 운동광 소녀. 아크하이브 천문대에서 비슈밤의 조수로 일하고 있다.",
+            "en": "A fitness-loving girl from Arkhive. She works as an assistant to Vishvam at the Arkhive Observatory."
+        },
         "universe" : "arkhive"
     },
     "kushagra": {
-        "ireum": "쿠샤그라",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
+        "nameKo": "쿠샤그라",
+        "nameEn": "Kushagra",
+        "quote": {
+            "ko": "잠깐만, 조금만 더 정리하고...",
+            "en": "Just a moment, let me organize this a bit more..."
+        },
+        "description" : {
+            "ko": "책 읽는 걸 정말 좋아하는 막내 기록자. 아직 일을 시작한지 얼마 안 되어서 그런지 본격적인 프로젝트에 끼기보다는 차원 연구소 1층 도서관에서 사서 일을 하고 있다.",
+            "en": "The youngest recorder who truly loves reading books. Since she has just started her job, rather than joining major projects, she works as a librarian at the library on the first floor of the Universe Observatory."
+        },
         "universe" : "arkhive"
     },
     "vishvam": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
+        "nameKo": "비슈밤",
+        "nameEn": "Vishvam",
+        "quote": {
+            "ko": "북극성이 어디 있는지 찾아 보겠니?",
+            "en": "Can you find where the North Star is?"
+        },
+        "description" : {
+            "ko": "아크하이브의 전 여행자. 지금은 천문대에서 반쯤 취미로 천문학을 하고 있다.",
+            "en": "A former traveler from Arkhive. Currently, he practices astronomy at the observatory half as a hobby."
+        },
         "universe" : "arkhive"
     },
     "sohee": {
-        "ireum": "소희",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
+        "nameKo": "소희",
+        "nameEn": "Sohee",
+        "quote": {
+            "ko": "-",
+            "en": "-"
+        },
+        "description" : {
+            "ko": "-",
+            "en": "-"
+        },
         "universe" : "arkhive"
     },
     "astra": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
-        "universe" : "arkhive"
+        "nameKo": "아스트라",
+        "nameEn": "Astra",
+        "quote": {
+            "ko": "괜찮아. 별수정이 길을 밝혀줄 거야.",
+            "en": "It's okay. The star crystal will light the way."
+        },
+        "description" : {
+            "ko": "꼬마 등대지기. 아직은 등대지기 일이 마냥 서툴다.",
+            "en": "A little lighthouse keeper. She is still completely inexperienced at lighthouse keeping."
+        },
+        "universe" : "stellamare"
     },
     "marine": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
-        "universe" : "arkhive"
+        "nameKo": "마린",
+        "nameEn": "Marine",
+        "quote": {
+            "ko": "별모래는 이런 빛을 내. 예쁘지?",
+            "en": "The star-sand glows with this kind of light. Pretty, isn't it?"
+        },
+        "description" : {
+            "ko": "별모래를 수집하는 걸 좋아하는 소녀. 말수가 적고 얌전한, 평범한 아이처럼 보이는 다중인격 소유자.",
+            "en": "A girl who loves collecting star-sand. A person with dissociative identity disorder who seems like a quiet, gentle, and ordinary child on the outside."
+        },
+        "universe" : "stellamare"
     },
     "ciel": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
-        "universe" : "arkhive"
+        "nameKo": "시엘",
+        "nameEn": "Ciel",
+        "quote": {
+            "ko": "이거 봐봐, 이 오토마톤 귀엽지?",
+            "en": "Look at this, isn't this automaton cute?"
+        },
+        "description" : {
+            "ko": "1학년 1반의 어둠 속성 학생. 마법공학에 관심 많은 소녀다.",
+            "en": "A dark-attributed, first-year student in Class 1. She is a girl with a great interest in magic engineering."
+        },
+        "universe" : "primaris"
     },
     "zett": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
-        "universe" : "arkhive"
+        "nameKo": "제트",
+        "nameEn": "Zett",
+        "quote": {
+            "ko": "잡을 수 있으면 잡아 보던가!",
+            "en": "Catch me if you can!"
+        },
+        "description" : {
+            "ko": "1학년 1반의 어둠 속성 학생. 노는 것을 매우 좋아하는 소년이다.",
+            "en": "A dark-attributed, first-year student in Class 1. He is a boy who loves playing around very much."
+        },
+        "universe" : "primaris"
     },
     "robin": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
-        "universe" : "arkhive"
+        "nameKo": "로빈",
+        "nameEn": "Robin",
+        "quote": {
+            "ko": "잘 봐! 내가 엄청 멋진 걸 보여줄게!",
+            "en": "Watch closely! I'll show you something amazing!"
+        },
+        "description" : {
+            "ko": "1학년 1반의 어둠 속성 학생. 마검술을 공부하고 있는 활기찬 소녀다.",
+            "en": "A dark-attributed, first-year student in Class 1. She is a lively girl who is studying magic swordsmanship."
+        },
+        "universe" : "primaris"
     },
     "patrick": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
-        "universe" : "arkhive"
+        "nameKo": "패트릭",
+        "nameEn": "Patrick",
+        "quote": {
+            "ko": "이게 셸리아크의 방식이야.",
+            "en": "-"
+        },
+        "description" : {
+            "ko": "셸리아크의 자경단원. 셸리아크 3구역에서 활동하고 있다.",
+            "en": "-"
+        },
+        "universe" : "zodiafield"
     },
     "rosamund": {
-        "ireum": "가나카",
-        "name": "Ganaka",
-        "quote": "apple.png",
-        "description" : "asdf",
-        "universe" : "arkhive"
+        "nameKo": "로저먼드",
+        "nameEn": "Rosamund",
+        "quote": {
+            "ko": "-",
+            "en": "-"
+        },
+        "description" : {
+            "ko": "-",
+            "en": "-"
+        },
+        "universe" : "zodiafield"
     },
     "template": {
-        "ireum": "-",
-        "name": "-",
-        "quote": "-",
-        "description" : "-",
+        "nameKo": "-",
+        "nameEn": "-",
+        "quote": {
+            "ko": "-",
+            "en": "-"
+        },
+        "description" : {
+            "ko": "-",
+            "en": "-"
+        },
         "universe" : "-"
     }
 }
