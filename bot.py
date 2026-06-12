@@ -11,7 +11,7 @@ client = discord.Client(intents=intents)
 tree = app_commands.CommandTree(client)
 
 embed_footer = "Arcaspai Project © 2021-2026 Redder"
-bot_icon = "https://media.discordapp.net/attachments/1491315989428572171/1493217429692747826/arcaspaibanner08.png"
+bot_icon = "arcaspaio_pfp.png"
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -62,9 +62,9 @@ def find_character(search_input: str) -> tuple[str, dict] | tuple[None, None]:
     if clean_input in char_list:
         return clean_input, char_list[clean_input]
         
-    for char_key, char_info in char_list.items():
-        if char_info.get("nameKo") == search_input.strip():
-            return char_key, char_info
+    for char_key, world_info in char_list.items():
+        if world_info.get("nameKo") == search_input.strip():
+            return char_key, world_info
             
     return None, None
 
@@ -80,7 +80,7 @@ async def on_ready():
 async def introduct_embed(interaction: discord.Interaction):
     lang = "ko" if interaction.locale == discord.Locale.korean else "en"
 
-    embed = discord.Embed(title="About Arcaspai" if lang == "en" else "Arcaspai 소개", colour=discord.Colour.from_rgb(144, 136, 255))
+    embed = discord.Embed(title="About Arcaspai" if lang == "en" else "아르카스페이 소개", colour=discord.Colour.from_rgb(144, 136, 255))
     embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
     embed.set_thumbnail(url=bot_icon)
     embed.add_field(name="Archived Space", value="A journey from fantasy to ideality." if lang == "en" else "공상에서 이상으로의 여정.", inline=False)
@@ -170,6 +170,42 @@ async def character_profiles(interaction: discord.Interaction, character: str):
         
         details_label = "details" if lang == "en" else "상세 정보"
         embed.add_field(name=details_label, value=f"[arcaspai.github.io/universe/characters/{universe}/{char_key}](https://arcaspai.github.io/universe/characters/{universe}/{char_key})", inline=False)
+        embed.set_footer(text=embed_footer)
+
+        await interaction.response.send_message(embed=embed, ephemeral=False)
+    else:
+        fail_msg = "캐릭터를 찾을 수 없습니다. 이름을 정확히 입력했는지 확인해주세요." if lang == "ko" else "Not found. Please check that you entered the information correctly."
+        await interaction.response.send_message(fail_msg, ephemeral=True)
+
+
+# send worlds info
+@tree.command(name="universe", description="embed worlds profiles")
+async def universe_info(interaction: discord.Interaction, world: str):
+    world_name = world.lower().strip()
+    world_key, world_info = find_world(world)
+    lang = "ko" if interaction.locale == discord.Locale.korean else "en"
+    
+    if world_info:
+        name_ko = world_info["nameKo"]
+        name_en = world_info["nameEn"]
+        universe = world_info['universe']
+        
+        quote = world_info["quote"].get(lang, world_info["quote"]["en"])
+        description = world_info["description"].get(lang, world_info["description"]["en"])
+        
+        title = f"{name_ko}의 프로필" if lang == "ko" else f"{name_en}'s profile"
+        
+        embed = discord.Embed(title=title, colour=discord.Colour.from_rgb(144, 136, 255))
+        embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
+        embed.set_thumbnail(url=f"https://arcaspai.github.io/universe/assets/img/icons/{char_key}_icon.png")
+        
+        embed.add_field(name="name(KO)" if lang == "en" else "이름(한)", value=name_ko, inline=True)
+        embed.add_field(name="name(EN)" if lang == "en" else "이름(영)", value=name_en, inline=True)
+
+        embed.add_field(name="descriptions" if lang == "en" else "설명", value=description, inline=False)
+        
+        details_label = "details" if lang == "en" else "상세 정보"
+        embed.add_field(name=details_label, value=f"[arcaspai.github.io/universe/worlds/{universe}/{char_key}](https://arcaspai.github.io/universe/worlds/{universe}/{char_key})", inline=False)
         embed.set_footer(text=embed_footer)
 
         await interaction.response.send_message(embed=embed, ephemeral=False)
