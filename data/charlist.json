@@ -55,12 +55,12 @@
         "nameKo": "소희",
         "nameEn": "Sohee",
         "quote": {
-            "ko": "-",
-            "en": "-"
+            "ko": "열차 출발합니다!",
+            "en": "The train is departing!"
         },
         "description" : {
-            "ko": "-",
-            "en": "-"
+            "ko": "아크하이브 출신 여행자.",
+            "en": "A traveler from Arkhive."
         },
         "universe" : "arkhive"
     },
@@ -134,11 +134,11 @@
         "nameEn": "Patrick",
         "quote": {
             "ko": "이게 셸리아크의 방식이야.",
-            "en": "-"
+            "en": "This is Sheliak's way."
         },
         "description" : {
             "ko": "셸리아크의 자경단원. 셸리아크 3구역에서 활동하고 있다.",
-            "en": "-"
+            "en": "A vigilante of Sheliark. He is active in Sheliark Sector 3."
         },
         "universe" : "zodiafield"
     },
@@ -146,12 +146,12 @@
         "nameKo": "로저먼드",
         "nameEn": "Rosamund",
         "quote": {
-            "ko": "-",
-            "en": "-"
+            "ko": "일 끝나거든 뭐 하고 놀까…",
+            "en": "What should we play after work…"
         },
         "description" : {
-            "ko": "-",
-            "en": "-"
+            "ko": "셸리아크의 정비공. 자기가 생각지도 못했던 분야에 재능이 있는 모양이다.",
+            "en": "Sheliak's mechanic. He seems to have talent in a field he never even imagined."
         },
         "universe" : "zodiafield"
     },

@@ -11,7 +11,7 @@ client = discord.Client(intents=intents)
 tree = app_commands.CommandTree(client)
 
 embed_footer = "Arcaspai Project © 2021-2026 Redder"
-bot_icon = "arcaspaio_pfp.png"
+bot_icon = "https://github.com/arcaspai/arcaspai-info-bot/blob/main/img/arcaspaibot_pfp2.png?raw=true"
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -81,7 +81,7 @@ async def introduct_embed(interaction: discord.Interaction):
     lang = "ko" if interaction.locale == discord.Locale.korean else "en"
 
     embed = discord.Embed(title="About Arcaspai" if lang == "en" else "아르카스페이 소개", colour=discord.Colour.from_rgb(144, 136, 255))
-    embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
+    embed.set_author(name="Arcaspai Info Bot", url="https://arcaspai.github.io", icon_url=bot_icon)
     embed.set_thumbnail(url=bot_icon)
     embed.add_field(name="Archived Space", value="A journey from fantasy to ideality." if lang == "en" else "공상에서 이상으로의 여정.", inline=False)
     embed.add_field(name="Project Start" if lang == "en" else "프로젝트 시작", value="2021-08-29", inline=True)
@@ -133,7 +133,7 @@ async def character_images(interaction: discord.Interaction, character: str, ima
             display_type = type_translations.get(imagetype.name, imagetype.name)
         
         embed = discord.Embed(title=f"{name_ko}의 {display_type}" if lang == "ko" else f"{name_en}'s {display_type}", colour=discord.Colour.from_rgb(144, 136, 255))
-        embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
+        embed.set_author(name="Arcaspai Info Bot", url="https://arcaspai.github.io", icon_url=bot_icon)
         embed.set_image(url=f"https://arcaspai.github.io/universe/assets/img/{imagetype.value}s/{char_key}_{imagetype.value}.png")
         embed.set_footer(text=embed_footer)
 
@@ -159,7 +159,7 @@ async def character_profiles(interaction: discord.Interaction, character: str):
         title = f"{name_ko}의 프로필" if lang == "ko" else f"{name_en}'s profile"
         
         embed = discord.Embed(title=title, colour=discord.Colour.from_rgb(144, 136, 255))
-        embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
+        embed.set_author(name="Arcaspai Info Bot", url="https://arcaspai.github.io", icon_url=bot_icon)
         embed.set_thumbnail(url=f"https://arcaspai.github.io/universe/assets/img/icons/{char_key}_icon.png")
         
         embed.add_field(name="name(KO)" if lang == "en" else "이름(한)", value=name_ko, inline=True)
@@ -196,7 +196,7 @@ async def universe_info(interaction: discord.Interaction, world: str):
         title = f"{name_ko}의 프로필" if lang == "ko" else f"{name_en}'s profile"
         
         embed = discord.Embed(title=title, colour=discord.Colour.from_rgb(144, 136, 255))
-        embed.set_author(name="Arcaspaio", url="https://arcaspai.github.io", icon_url=bot_icon)
+        embed.set_author(name="Arcaspai Info Bot", url="https://arcaspai.github.io", icon_url=bot_icon)
         embed.set_thumbnail(url=f"https://arcaspai.github.io/universe/assets/img/icons/{char_key}_icon.png")
         
         embed.add_field(name="name(KO)" if lang == "en" else "이름(한)", value=name_ko, inline=True)
