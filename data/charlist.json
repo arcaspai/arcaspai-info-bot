@@ -4,7 +4,7 @@
         "nameEn": "Alaya",
         "quote": {
             "ko": "저랑 같이 별 보러 가실래요?",
-            "en": "Would you like to go star-gazing with me?"
+            "en": "Would you like to go stargazing with me?"
         },
         "description" : {
             "ko": "아크하이브 출신 여행자. 진리체 탐구를 위해 여러 우주를 여행하는 중이다.",
@@ -47,7 +47,7 @@
         },
         "description" : {
             "ko": "아크하이브의 전 여행자. 지금은 천문대에서 반쯤 취미로 천문학을 하고 있다.",
-            "en": "A former traveler from Arkhive. Currently, he practices astronomy at the observatory half as a hobby."
+            "en": "A former traveler from Arkhive. Currently, he dabbles in astronomy at the observatory as something of a hobby."
         },
         "universe" : "arkhive"
     },
@@ -73,7 +73,7 @@
         },
         "description" : {
             "ko": "꼬마 등대지기. 아직은 등대지기 일이 마냥 서툴다.",
-            "en": "A little lighthouse keeper. She is still completely inexperienced at lighthouse keeping."
+            "en": "A little lighthouse keeper who is still getting the hang of the job."
         },
         "universe" : "stellamare"
     },
@@ -86,7 +86,20 @@
         },
         "description" : {
             "ko": "별모래를 수집하는 걸 좋아하는 소녀. 말수가 적고 얌전한, 평범한 아이처럼 보이는 다중인격 소유자.",
-            "en": "A girl who loves collecting star-sand. A person with dissociative identity disorder who seems like a quiet, gentle, and ordinary child on the outside."
+            "en": "A girl who loves collecting star-sand — she appears to be a quiet, gentle, and ordinary child on the outside, but harbors multiple personalities within."
+        },
+        "universe" : "stellamare"
+    },
+    "thalassa": {
+        "nameKo": "탈라사",
+        "nameEn": "Thalassa",
+        "quote": {
+            "ko": "다른 것보다도 파도 소리가 좋은걸.",
+            "en": "More than anything, I like the sound of the waves."
+        },
+        "description" : {
+            "ko": "바닷가에서 자주 보이는 신비로운 소녀.",
+            "en": "A mysterious girl often seen by the seashore."
         },
         "universe" : "stellamare"
     },
@@ -99,7 +112,7 @@
         },
         "description" : {
             "ko": "1학년 1반의 어둠 속성 학생. 마법공학에 관심 많은 소녀다.",
-            "en": "A dark-attributed, first-year student in Class 1. She is a girl with a great interest in magic engineering."
+            "en": "A first-year student in Class 1-1 with a dark affinity. She is a girl with a great interest in magic engineering."
         },
         "universe" : "primaris"
     },
@@ -112,7 +125,7 @@
         },
         "description" : {
             "ko": "1학년 1반의 어둠 속성 학생. 노는 것을 매우 좋아하는 소년이다.",
-            "en": "A dark-attributed, first-year student in Class 1. He is a boy who loves playing around very much."
+            "en": "A first-year student in Class 1-1 with a dark affinity. He is a playful boy who loves having fun."
         },
         "universe" : "primaris"
     },
@@ -125,7 +138,7 @@
         },
         "description" : {
             "ko": "1학년 1반의 어둠 속성 학생. 마검술을 공부하고 있는 활기찬 소녀다.",
-            "en": "A dark-attributed, first-year student in Class 1. She is a lively girl who is studying magic swordsmanship."
+            "en": "A first-year student in Class 1-1 with a dark affinity. She is a lively girl who is studying magic swordsmanship."
         },
         "universe" : "primaris"
     },
@@ -138,7 +151,7 @@
         },
         "description" : {
             "ko": "셸리아크의 자경단원. 셸리아크 3구역에서 활동하고 있다.",
-            "en": "A vigilante of Sheliark. He is active in Sheliark Sector 3."
+            "en": "A vigilante of Sheliak. He is active in Sheliak Sector 3."
         },
         "universe" : "zodiafield"
     },
@@ -147,11 +160,11 @@
         "nameEn": "Rosamund",
         "quote": {
             "ko": "일 끝나거든 뭐 하고 놀까…",
-            "en": "What should we play after work…"
+            "en": "What should we do for fun after work…"
         },
         "description" : {
             "ko": "셸리아크의 정비공. 자기가 생각지도 못했던 분야에 재능이 있는 모양이다.",
-            "en": "Sheliak's mechanic. He seems to have talent in a field he never even imagined."
+            "en": "Sheliak's mechanic. He seems to have a talent for something he never expected."
         },
         "universe" : "zodiafield"
     },
