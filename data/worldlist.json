@@ -1,0 +1,82 @@
+{
+    "arkhive": {
+        "nameKo": "아크하이브",
+        "nameEn": "Arkhive",
+        "description": {
+            "ko": "초기 우주가 다른 우주로 파생되기 전에 적용되었던 근간 법칙을 관측할 수 있는 공간. 좁은 의미로는 그 안에서 차원 관측을 하는 관측소와 천문대가 있는 도시를 의미한다.",
+            "en": "A space where one can observe the Root Laws that governed the early universe before it branched into other universes. In a narrower sense, it refers to the city housing the observatory and astronomical center that conduct dimensional observations."
+        }
+    },
+    "stellamare": {
+        "nameKo": "스텔라마레",
+        "nameEn": "Stellamare",
+        "description": {
+            "ko": "등대의 가호를 받는 바닷가 마을. 작고 평화로운 마을로, 선택받은 이는 온전한 별의 힘을 다룰 수 있다.",
+            "en": "A seaside village under the protection of a lighthouse. In this small and peaceful village, the chosen one can wield the pure power of the stars."
+        }
+    },
+    "primaris": {
+        "nameKo": "프리마리스",
+        "nameEn": "Primaris",
+        "description": {
+            "ko": "마법사와 비마법사가 함께 사는 도시. 전통과 마법이 가득한 풍경이지만, 마법공학이라는 기술이 신흥 기술로 떠오르고 있다.",
+            "en": "A city where mages and non-mages live together. Though the landscape is steeped in tradition and magic, magitek is on the rise as an emerging field."
+        }
+    },
+    "zodiafield": {
+        "nameKo": "조디아필드",
+        "nameEn": "Zodiafield",
+        "description": {
+            "ko": "먼 옛날, 어떤 사고로 사막이 된 지역. 그 위에 세워진 첨단 도시 네오베가는 조디아필드에 남아있는 유일한 도시로, 사막 어딘가에는 멸망한 도시의 잔해가 남아있다.",
+            "en": "A region transformed into a desert ages ago by some unknown calamity. Neo-Vega, a high-tech city built upon it, is the only remaining city in Zodiafield, while the ruins of fallen cities lie scattered across the desert."
+        }
+    },
+    "negative-existence": {
+        "nameKo": "무한계",
+        "nameEn": "Negative Existence",
+        "description": {
+            "ko": "여러 물체들이 한데 뒤섞여 초현실적인 구성을 이루는 공간의 집합체. 각각의 작은 공간이 얽히고설켜 만들어낸 공간 안에서는 조합과 분해가 반복된다.",
+            "en": "An aggregate of spaces where various objects blend together into a surreal composition. Within the tangled web of interwoven mini-spaces, composition and dissolution repeat without end."
+        }
+    },
+    "daramoe": {
+        "nameKo": "다라뫼",
+        "nameEn": "Daramoe",
+        "description": {
+            "ko": "인간과 도깨비가 공존하는 도시 변두리 마을. 최근에는 인근 도시에서 서구 문물이 들어오며 이전과는 사뭇 다른 분위기가 형성되고 있다.",
+            "en": "A village on the outskirts of the city where humans and dokkaebi coexist. Recently, occident culture has been introduced from nearby cities, creating quite a different atmosphere from before."
+        }
+    },
+    "shiromaho": {
+        "nameKo": "시로마호",
+        "nameEn": "Shiromaho",
+        "description": {
+            "ko": "시골 어딘가에 있는 그나마 번화한 마을.",
+            "en": "A relatively bustling village somewhere in the countryside."
+        }
+    },
+    "mundawn": {
+        "nameKo": "먼동",
+        "nameEn": "Mundawn",
+        "description": {
+            "ko": "평범한 사람들 사이에 초능력을 쓰는 사람들이 숨어 사는 도시. 작은 도시국가로, 인근에는 상오라는 더 큰 기업국가가 있다.",
+            "en": "A city where people with superpowers live hidden among ordinary citizens. A small city-state, adjacent to a larger corporate state known as Sang-oh."
+        }
+    },
+    "chihonoland": {
+        "nameKo": "키호놀란드",
+        "nameEn": "Chihonoland",
+        "description": {
+            "ko": "살짝 쌀쌀한 지역에 있는 작은 마을. 어린이와 눈사람이 많이 보인다.",
+            "en": "A small village in a slightly chilly region. Many children and snowmen can be seen."
+        }
+    },
+    "template": {
+        "nameKo": "",
+        "nameEn": "-",
+        "description": {
+            "ko": "-",
+            "en": "-"
+        }
+    }
+}

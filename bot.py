@@ -22,6 +22,8 @@ intents.message_content = True
 # import JSON file
 with open('data/charlist.json', 'r', encoding='utf-8') as f:
     char_list = json.load(f)
+with open('data/worldlist.json', 'r', encoding='utf-8') as f:
+    world_list = json.load(f)
 
 
 # Command Localization System
@@ -41,11 +43,13 @@ class CommandTranslator(app_commands.Translator):
                 "embed character profiles (write only forenames please.)": "캐릭터 프로필을 임베드로 확인합니다. (성 없이 이름만 입력해주세요.)",
                 "blog": "블로그",
                 "universe": "세계관",
+                "embed worlds infomations": "세계관 정보를 임베드로 확인합니다.",
                 "youtube": "유튜브",
                 "discord": "디스코드",
                 "soundtracks": "사운드트랙",
                 "site": "사이트",
-                "imagetype":"이미지유형"
+                "imagetype": "이미지유형",
+                "world": "세계관"
             }
         }
         
@@ -62,9 +66,22 @@ def find_character(search_input: str) -> tuple[str, dict] | tuple[None, None]:
     if clean_input in char_list:
         return clean_input, char_list[clean_input]
         
-    for char_key, world_info in char_list.items():
-        if world_info.get("nameKo") == search_input.strip():
-            return char_key, world_info
+    for char_key, char_info in char_list.items():
+        if char_info.get("nameKo") == search_input.strip() or char_info.get("nameEn", "").lower() == clean_input:
+            return char_key, char_info
+            
+    return None, None
+
+
+def find_world(search_input: str) -> tuple[str, dict] | tuple[None, None]:
+    clean_input = search_input.lower().strip()
+    
+    if clean_input in world_list:
+        return clean_input, world_list[clean_input]
+        
+    for world_key, world_info in world_list.items():
+        if world_info.get("nameKo") == search_input.strip() or world_info.get("nameEn", "").lower() == clean_input:
+            return world_key, world_info
             
     return None, None
 
@@ -179,25 +196,23 @@ async def character_profiles(interaction: discord.Interaction, character: str):
 
 
 # send worlds info
-@tree.command(name="universe", description="embed worlds profiles")
+@tree.command(name="universe", description="embed worlds infomations")
+@app_commands.describe(world=app_commands.locale_str("world"))
 async def universe_info(interaction: discord.Interaction, world: str):
-    world_name = world.lower().strip()
     world_key, world_info = find_world(world)
     lang = "ko" if interaction.locale == discord.Locale.korean else "en"
     
     if world_info:
         name_ko = world_info["nameKo"]
         name_en = world_info["nameEn"]
-        universe = world_info['universe']
         
-        quote = world_info["quote"].get(lang, world_info["quote"]["en"])
         description = world_info["description"].get(lang, world_info["description"]["en"])
         
-        title = f"{name_ko}의 프로필" if lang == "ko" else f"{name_en}'s profile"
+        title = f"{name_ko}의 정보" if lang == "ko" else f"{name_en}'s information"
         
         embed = discord.Embed(title=title, colour=discord.Colour.from_rgb(144, 136, 255))
         embed.set_author(name="Arcaspai Info Bot", url="https://arcaspai.github.io", icon_url=bot_icon)
-        embed.set_thumbnail(url=f"https://arcaspai.github.io/universe/assets/img/icons/{char_key}_icon.png")
+        embed.set_thumbnail(url=f"https://arcaspai.github.io/universe/assets/img/views/{world_key}.png")
         
         embed.add_field(name="name(KO)" if lang == "en" else "이름(한)", value=name_ko, inline=True)
         embed.add_field(name="name(EN)" if lang == "en" else "이름(영)", value=name_en, inline=True)
@@ -205,12 +220,12 @@ async def universe_info(interaction: discord.Interaction, world: str):
         embed.add_field(name="descriptions" if lang == "en" else "설명", value=description, inline=False)
         
         details_label = "details" if lang == "en" else "상세 정보"
-        embed.add_field(name=details_label, value=f"[arcaspai.github.io/universe/worlds/{universe}/{char_key}](https://arcaspai.github.io/universe/worlds/{universe}/{char_key})", inline=False)
+        embed.add_field(name=details_label, value=f"[arcaspai.github.io/universe/worlds/{world_key}](https://arcaspai.github.io/universe/worlds/{world_key})", inline=False)
         embed.set_footer(text=embed_footer)
 
         await interaction.response.send_message(embed=embed, ephemeral=False)
     else:
-        fail_msg = "캐릭터를 찾을 수 없습니다. 이름을 정확히 입력했는지 확인해주세요." if lang == "ko" else "Not found. Please check that you entered the information correctly."
+        fail_msg = "세계관을 찾을 수 없습니다. 이름을 정확히 입력했는지 확인해주세요." if lang == "ko" else "Not found. Please check that you entered the information correctly."
         await interaction.response.send_message(fail_msg, ephemeral=True)
 
 # making groups
